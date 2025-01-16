@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --dark-blue-main: hsl(217, 54%, 11%);
+    --dark-blue-card: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark-blue-main);
+}
+
+.container {
+    margin: 50px auto;
+    width: 500px;
+    min-height: 80vh;
+    background-color: var(--dark-blue-card);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Container da imagem */
+.image-container {
+    position: relative;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+/* Imagem */    
+.equilibrium {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Overlay */
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5); /* Cor ciano com transparência */
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Ícone de visualização */
+.image-container img.icon-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Efeito Hover */
+.image-container:hover::before,
+.image-container:hover img.icon-view {
+    opacity: 1;
+}
+
+h1 {
+    color: var(--white);
+    font-weight: 500;
+    margin-left: 2rem;
+    font-size: 30px;
+}
+
+h1:hover {
+    color: var(--cyan);
+}
+
+p {
+    color: var(--soft-blue);
+}
+
+.collection {
+    padding-top: 1rem;
+    margin-left: 2rem;
+    font-size: 26px;
+    padding-bottom: 2rem;
+    font-weight: 300;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+b.eth {
+    color: var(--cyan);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.ethereum-icon {
+    padding-left: 2rem;
+    padding-right: 8px;
+}
+
+b.days {
+    color: var(--soft-blue);
+    font-weight: 300;
+    margin-right: 2rem;
+    font-size: 20px;
+}
+
+.clock-icon {
+    padding-right: 8px; 
+}
+
+.name { 
+    border-top: 1px solid var(--dark-blue-line);
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+.avatar {
+    margin: 1rem;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--white);
+}
+
+span {
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 18px;
+    padding-right: 5px;
+
+}
+
+h3 {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+h3:hover {
+    color: var(--cyan);
+}
+
+
